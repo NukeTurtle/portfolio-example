@@ -96,7 +96,7 @@ body {
 }
 
 .menu_list a li:hover {
-    background: rgba(255,0,0,0.4) !important;
+    background: rgb(107 56 56) !important;
 }
 
 i[class^="fa"]{
