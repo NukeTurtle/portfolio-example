@@ -26,6 +26,12 @@ body {
     justify-content: center;
 }
 
+/* !!! WARNING !!! - ONLY USED FOR PREVIEW, CHANGE ACCORDINGLY */
+#bio, #skills, #project, #contact_form {
+    height: 400px;
+}
+/* !!! WARNING !!! - ONLY USED FOR PREVIEW, CHANGE ACCORDINGLY */
+
 .img {
     background: linear-gradient(0deg, #111, transparent 180%), url(img/back.jpg);
     background-size: cover;
@@ -44,7 +50,7 @@ body {
 }
 
 .menu {
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(100,100,100,1);
     width: 0;
     height: 100vh;
     left: 0;
@@ -56,17 +62,49 @@ body {
 .menu_list {
     display: none;
     padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
-.menu_list li {
+.menu_list a {
+    color: var(--light_text);
+}
+
+.menu_list a:nth-child(1) li {
+    background: rgba(0,0,0,0.1);
+}
+
+.menu_list a:nth-child(2) li {
+    background: rgba(0,0,0,0.3);
+}
+
+.menu_list a:nth-child(3) li {
+    background: rgba(0,0,0,0.5);
+}
+
+.menu_list a:nth-child(4) li {
+    background: rgba(0,0,0,0.7);
+}
+
+.menu_list a li {
     list-style: none;
-    padding-bottom: 5px;
-    text-align: center;
+    box-shadow: -2px 1px 2px;
+    text-align: left;
     cursor: pointer;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    padding: calc((100vh / 8 ) - (1em * 2) - (4px)) 2em;
 }
 
-li a {
+.menu_list a li:hover {
+    background: rgb(107 56 56) !important;
+}
+
+i[class^="fa"]{
+    font-size: 1.5em;
+    padding: 1em;
+}
+
+a {
     text-decoration: none;
     color: initial;
 }
@@ -125,18 +163,20 @@ li a {
 
 .mainHeader{
     position: absolute;
-    top: 50%;
+    bottom: 45%;
     color: #fff;
-    font-size: 1em;
+    font-size: 2vw;
     letter-spacing: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-transform: uppercase;
+    text-align: center;
+    max-width: 90%;
 }
 
 .mainHeader span:nth-child(1) {
-    font-size: 2.5em;
+    font-size: 5vw;
     background: rgba(255, 0, 0, 0.2);
     padding: 0.2em 0.5em;
     letter-spacing: 0.4em;
@@ -145,109 +185,6 @@ li a {
 
 @media only screen and (min-width: 800px) {
     .toggle {
-        width:25%;
+        width:30%;
     }
-}
-
-.bio span:nth-child(1){
-    position: absolute;
-    color: rgb(223, 9, 9);
-    font-size: 1em;
-    letter-spacing: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-transform: uppercase;
-}
-
-#bio{
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 10%;
-}
-
-#bio p {
-    font-size: 1.5rem;
-}
-
-a{
-    color: #4a4a4a;
-}
-
-#skills{
-    height: 100vh;
-    background-color: white;
-    text-align: center;
-    padding: 5%;
-}
-
-#skills .card{
-    width: 50%;
-    float: left;
-}
-
-#skills .card .card-header{
-    padding: 10px 50px;
-}
-
-#skills .card .card-body{
-    padding: 10px 0px;
-}
-
-#skills .card .card-body p{
-    line-height: 1.5rem;
-}
-
-#projects{
-    height: 120vh;
-    background-color:dimgrey;
-    color: white;
-    text-align: center;
-    padding: 5%;
-}
-
-#projects .left-projects{
-    float: left;
-    width: 70%;
-}
-
-#projects .right-projects{
-    float: right;
-    width: 30%;
-}
-
-#projects .card{
-    text-align: left;
-    background-color: #555;
-    padding: 15px 1%;
-}
-
-#projects .dark-card{
-    background-color: #333;
-}
-
-#contact_form{
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 10%;
-    height: 10hv;
-}
-
-footer{
-    text-align: center;
-    padding: 10%;
-}
-
-#socials{
-    background-color: white;
-    text-align: center;
-}
-
-#socials a{
-    margin: 5%;
-    text-decoration: none;
-}
-
-button{
-    padding: 10px;
 }
