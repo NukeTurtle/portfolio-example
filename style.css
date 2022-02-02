@@ -194,7 +194,7 @@ li a {
     padding: 10%;
 }
 #bio img{
-    width: 100vw;
+    width: 50vw;
     margin-left: -20%;
 
 }
@@ -207,7 +207,7 @@ a{
 }
 
 #skills{
-    height: 100vh;
+    height: 100%;
     background-color: white;
     text-align: center;
     padding: 5%;
@@ -224,6 +224,10 @@ a{
 
 #skills .card .card-header{
     padding: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 }
 
 #skills .card .card-body{
@@ -271,8 +275,6 @@ a{
     background-color: #393939;
     padding: 15px 5%;
     margin-bottom: 10px;
-
-    
 }
 
 #projects .dark-card{
@@ -297,6 +299,7 @@ footer{
     text-align: center;
     align-items: center;
     justify-items: center;
+    font-size: 10px;
 }
 
 #socials a{
@@ -313,13 +316,20 @@ button{
 
 
 
-
-@media only screen and (min-width: 800px) {
+/*styling desktop*/
+@media only screen and (max-width: 800px) {
     .toggle {
         width:30%;
     }
     #bio img{
-        width: 50%;
+        width: 100%;
         margin-left: 0;
+    }
+    #contact_form h1{
+        font-size: 2em !important;
+    }
+    #skills i[class^="fa"], #contact_form i[class^="fa"]{
+        font-size: 3em;
+        padding: 1em;
     }
 }
