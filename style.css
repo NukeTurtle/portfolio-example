@@ -44,7 +44,7 @@ body {
 }
 
 .menu {
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(100,100,100,1);
     width: 0;
     height: 100vh;
     left: 0;
@@ -60,12 +60,42 @@ body {
     margin-block-end: 0;
 }
 
-.menu_list li {
+.menu_list a {
+    color: var(--light_text);
+}
+
+.menu_list a:nth-child(1) li {
+    background: rgba(0,0,0,0.1);
+}
+
+.menu_list a:nth-child(2) li {
+    background: rgba(0,0,0,0.3);
+}
+
+.menu_list a:nth-child(3) li {
+    background: rgba(0,0,0,0.5);
+}
+
+.menu_list a:nth-child(4) li {
+    background: rgba(0,0,0,0.7);
+}
+
+.menu_list a li {
     list-style: none;
-    padding-bottom: 5px;
-    text-align: center;
+    box-shadow: -2px 1px 2px;
+    text-align: left;
     cursor: pointer;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    padding: calc((100vh / 8 ) - (1em * 2) - (4px)) 2em;
+}
+
+.menu_list a li:hover {
+    background: rgb(107 56 56) !important;
+}
+
+i[class^="fa"]{
+    font-size: 1.5em;
+    padding: 1em;
 }
 
 li a {
@@ -127,14 +157,16 @@ li a {
 
 .mainHeader{
     position: absolute;
-    top: 50%;
+    bottom: 45%;
     color: #fff;
-    font-size: 1em;
+    font-size: 2vw;
     letter-spacing: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-transform: uppercase;
+    text-align: center;
+    max-width: 90%;
 }
 
 .mainHeader span:nth-child(1) {
@@ -143,12 +175,6 @@ li a {
     padding: 0.2em 0.5em;
     letter-spacing: 0.4em;
     margin-bottom: 0.5em;
-}
-
-@media only screen and (min-width: 800px) {
-    .toggle {
-        width:25%;
-    }
 }
 
 .bio span:nth-child(1){
@@ -168,7 +194,9 @@ li a {
     padding: 10%;
 }
 #bio img{
-    width: 50%;
+    width: 100vw;
+    margin-left: -20%;
+
 }
 #bio p {
     font-size: 1.5rem;
@@ -205,45 +233,50 @@ a{
 #skills .card .card-body p{
     line-height: 1.5rem;
 }
-.card:nth-of-type(1){
+#skills .card:nth-of-type(1){
     border-width: 0 0.5px 0.5px 0;
     border-color: grey;
     border-style: solid;
 }
-.card:nth-of-type(2){
+#skills .card:nth-of-type(2){
     margin-bottom: -1px;
 }
-.card:nth-of-type(4){
+#skills .card:nth-of-type(4){
     border-width:  0.5px 0 0 0.5px;
     border-color: grey;
     border-style: solid;
 }
 #projects{
-    height: 120vh;
-    background-color:dimgrey;
+    background-color:#363636;
     color: white;
     text-align: center;
     padding: 5%;
 }
+.projects-container{
+    display: flex;
+}
 
 #projects .left-projects{
-    float: left;
-    width: 70%;
+    width: 45%;
+    margin: 10px;
+
 }
 
 #projects .right-projects{
-    float: right;
-    width: 30%;
+    width: 45%;
 }
 
 #projects .card{
     text-align: left;
-    background-color: #555;
-    padding: 15px 1%;
+    background-color: #393939;
+    padding: 15px 5%;
+    margin-bottom: 10px;
+
+    
 }
 
 #projects .dark-card{
-    background-color: #333;
+    background-color: #333333;
 }
 
 #contact_form{
@@ -259,17 +292,34 @@ footer{
 }
 
 #socials{
+    display: flex;
     background-color: white;
     text-align: center;
+    align-items: center;
+    justify-items: center;
 }
 
 #socials a{
     margin: 5%;
-    text-decoration: none;
+    margin: 0 auto;
 }
-.fa:before {
+.fab:before {
     color: #d4d4d4;
+    font-size: 2em;
 }
 button{
     padding: 10px;
+}
+
+
+
+
+@media only screen and (min-width: 800px) {
+    .toggle {
+        width:30%;
+    }
+    #bio img{
+        width: 50%;
+        margin-left: 0;
+    }
 }
