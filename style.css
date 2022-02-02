@@ -26,6 +26,12 @@ body {
     justify-content: center;
 }
 
+/* !!! WARNING !!! - ONLY USED FOR PREVIEW, CHANGE ACCORDINGLY */
+#bio, #skills, #project, #contact_form {
+    height: 400px;
+}
+/* !!! WARNING !!! - ONLY USED FOR PREVIEW, CHANGE ACCORDINGLY */
+
 .img {
     background: linear-gradient(0deg, #111, transparent 180%), url(img/back.jpg);
     background-size: cover;
@@ -58,23 +64,6 @@ body {
     padding: 0;
     margin-block-start: 0;
     margin-block-end: 0;
-}
-
-.menu_list a {
-    color: var(--light_text);
-}
-
-.menu_list a:nth-child(1) li {
-    background: rgba(0,0,0,0.1);
-}
-
-.menu_list a:nth-child(2) li {
-    background: rgba(0,0,0,0.3);
-}
-
-.menu_list a:nth-child(3) li {
-    background: rgba(0,0,0,0.5);
-}
 
 .menu_list a:nth-child(4) li {
     background: rgba(0,0,0,0.7);
@@ -98,7 +87,7 @@ i[class^="fa"]{
     padding: 1em;
 }
 
-li a {
+a {
     text-decoration: none;
     color: initial;
 }
@@ -170,12 +159,13 @@ li a {
 }
 
 .mainHeader span:nth-child(1) {
-    font-size: 2.5em;
+    font-size: 5vw;
     background: rgba(255, 0, 0, 0.2);
     padding: 0.2em 0.5em;
     letter-spacing: 0.4em;
     margin-bottom: 0.5em;
 }
+
 
 .bio span:nth-child(1){
     position: absolute;
@@ -332,3 +322,4 @@ button{
         padding: 1em;
     }
 }
+
